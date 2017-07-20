@@ -3,9 +3,9 @@
     $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(!empty($post['name']) && !empty($post['label']) && !empty($post['genre']) && !empty($post['sales'])){ 
     try {
-        $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'm0byl3tte');
+        $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'mdp');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'm0byl3tte');
+$db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'mdp');
 
 $newalbum = $db->prepare('INSERT INTO album(name, date, label, genre, sales, group_id) VALUES (:name, :date, :label, :genre, :sales, :group_id)');
     $newalbum->bindValue(':name', 'Yellow Submarine');

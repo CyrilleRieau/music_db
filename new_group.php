@@ -3,7 +3,7 @@
     $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(!empty($post['name']) && !empty($post['start'])){ 
     try {
-        $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'm0byl3tte');
+        $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'mdp');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $newgroup = $db->prepare('INSERT INTO `group`(name, start, end, origin) VALUES (:name, :start, :end, :origin);');
         if(empty($post['end'])) {

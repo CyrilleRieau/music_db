@@ -14,7 +14,7 @@
 </style>
     <?php 
 try {
-    $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'm0byl3tte');
+    $db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'mdp');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $groups = $db->query('SELECT * FROM `group`');
     $group =$groups->fetchAll(PDO::FETCH_ASSOC);

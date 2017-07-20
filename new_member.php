@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'm0byl3tte');
+$db = new PDO('mysql:host=localhost;dbname=music_db', 'cyrille', 'mdp');
 
 $newmember = $db->prepare('INSERT INTO member(firstname, lastname, nickname, `role`, birth, death) VALUES (:firstname, :lastname, :nickname, :role, :birth, :death)');
     $newmember->bindValue(':firstname', 'Jacques');
